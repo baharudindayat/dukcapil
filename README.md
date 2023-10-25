@@ -2,7 +2,7 @@
 
 ## Validation Ktp
 
-```http
+```
   POST /dukcapil/ktp/validate
 ```
 * Url Params
