@@ -1,7 +1,6 @@
-package com.dukcapil.ktp.model;
+package com.dukcapil.dukcapil.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,12 +17,10 @@ import java.sql.Date;
 public class Ktp {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotNull(message = "ID should not be null")
     private String nik;
 
     @Column(nullable = false)
-    private String Provinsi;
+    private String provinsi;
 
     @Column(nullable = false)
     private String kota;
@@ -56,6 +53,9 @@ public class Ktp {
     private String kelurahan;
 
     @Column(nullable = false)
+    private String kecamatan;
+
+    @Column(nullable = false)
     private String agama;
 
     @Column(nullable = false)
@@ -70,7 +70,12 @@ public class Ktp {
     @Column(nullable = false)
     private String berlaku_hingga;
 
+    @Temporal(TemporalType.DATE)
     @Column(nullable = false)
-    private String tanggal_perekaman;
+    private Date tanggal_perekaman;
 
+    @PrePersist
+    private void onCreate() {
+        tanggal_perekaman = new Date(System.currentTimeMillis());
+    }
 }

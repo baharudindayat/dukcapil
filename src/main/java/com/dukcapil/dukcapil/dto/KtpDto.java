@@ -1,4 +1,4 @@
-package com.dukcapil.ktp.dto;
+package com.dukcapil.dukcapil.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotEmpty;
