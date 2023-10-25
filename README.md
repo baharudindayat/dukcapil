@@ -2,7 +2,7 @@
 
 ## Base Url
 ```
- dukcapil\
+ dukcapil/
 ```
 
 ## Validation Ktp
