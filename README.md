@@ -1,9 +1,14 @@
 # API CONTRACT DUKCAPIL
 
+## Base Url
+```
+ dukcapil/
+```
+
 ## Validation Ktp
 
 ```
-  POST /dukcapil/ktp/validate
+  POST ktp/validate
 ```
 * Url Params
   None
